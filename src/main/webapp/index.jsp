@@ -3,7 +3,7 @@
 <html class="x-admin-sm">
 <head>
     <meta charset="UTF-8">
-    <title>房地产后台管理系统</title>
+    <title>后台管理系统</title>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -19,7 +19,7 @@
 <!-- 顶部开始 -->
 <div class="container">
     <div class="logo">
-        <a href="#">房地产后台管理系统</a></div>
+        <a href="#">后台管理系统</a></div>
     <div class="left_open">
         <a><i title="展开左侧栏" class="iconfont">&#xe699;</i></a>
     </div>
@@ -28,7 +28,7 @@
         <li class="new-nav" style="width: 200px">上次登录时间：${oldLoginTime}</li>
         <li class="new-nav" style="width: 180px">当前时间：<span id="time"></span></li>
         <li class="layui-nav-item">
-            <a href="javascript:;" style="color: #fbf6fd">${user.username}</a>
+            <a href="javascript:;" style="color: red">${user.username}</a>
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
                 <dd>
@@ -65,7 +65,12 @@
                     </li>
                 </ul>
             </li>
-
+            <%--<li>
+                <a href="javascript:;" onclick="xadmin.add_tab('部门列表','/departmentList.jsp')">
+                    <i class="iconfont left-nav-li" lay-tips="单位管理">&#xe6a2;</i>
+                    <cite>部门管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+            </li>--%>
             <li>
                 <a href="javascript:;">
                     <i class="iconfont left-nav-li" lay-tips="用户管理">&#xe6b8;</i>

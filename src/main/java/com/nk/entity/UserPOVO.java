@@ -1,4 +1,4 @@
-package com.nk.demoreset.pojo;
+package com.nk.entity;
 
 import cn.afterturn.easypoi.excel.annotation.Excel;
 import lombok.Data;

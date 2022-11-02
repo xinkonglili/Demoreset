@@ -1,6 +1,6 @@
-package com.nk.demoreset.pojo;
+package com.nk.entity;
 
-import com.nk.demoreset.mapper.LoginLogMapper;
+import com.nk.mapper.LoginLogMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,8 +11,8 @@ import java.util.List;
 public class Export {
     public static List<LoginLogPOVO> loginLogPOVOList;
     public static List<LoginLogCount> loginLogCountList;
-    //public static List<StaffCount> staffCountList;
-    //public static List<OperationInfo> operationInfoList;
+    public static List<StaffCount> staffCountList;
+    public static List<OperationInfo> operationInfoList;
     public static LoginLogMapper logMapper;
     @Autowired
     public  LoginLogMapper loginLogMapper;

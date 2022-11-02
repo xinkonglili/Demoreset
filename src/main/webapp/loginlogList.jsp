@@ -105,6 +105,11 @@
             url: '/loginLog/getLoginLog',
             toolbar: '#toolbarDemo',
             defaultToolbar: [],
+            /*defaultToolbar: ['filter', 'exports', 'print', {
+                title: '提示',
+                layEvent: 'LAYTABLE_TIPS',
+                icon: 'layui-icon-tips'
+            }],*/
             response: {
                 statusCode: 200 //规定成功的状态码，默认：0
             },
@@ -201,7 +206,7 @@
                     return n.id;
                 });
                 if (data.length !== 0) {
-                    layer.confirm('真的删除行吗', function (index) {
+                    layer.confirm('真的删除行么', function (index) {
                         jqPromiseAjax({
                             url:'/loginLog/deleteLoginLog',
                             contentType : "application/json;charset=utf-8",
