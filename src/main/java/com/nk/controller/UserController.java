@@ -324,7 +324,7 @@ public class UserController {
                     //为了避免重复 改名
                     String newName = UUID.randomUUID().toString().replaceAll("-", "") + fExt;
                     byte[] bytes = file.getBytes();
-                    String path = "D:\\项目\\practice02\\src\\main\\webapp\\upload\\" + newName;
+                    String path = "D:\\Demoreset\\src\\main\\webapp\\upload\\" + newName;
                     stream = new BufferedOutputStream(new FileOutputStream(
                             new File(path)));
                     stream.write(bytes);
@@ -387,7 +387,7 @@ public class UserController {
                     //为了避免重复 改名
                     String newName = UUID.randomUUID().toString().replaceAll("-", "") + fExt;
                     byte[] bytes = file.getBytes();
-                    String path = "D:\\项目\\practice02\\src\\main\\webapp\\upload\\" + newName;
+                    String path = "D:\\Demoreset\\src\\main\\webapp\\upload\\" + newName;
                     stream = new BufferedOutputStream(new FileOutputStream(
                             new File(path)));
                     stream.write(bytes);

@@ -28,7 +28,7 @@
         <li class="new-nav" style="width: 200px">上次登录时间：${oldLoginTime}</li>
         <li class="new-nav" style="width: 180px">当前时间：<span id="time"></span></li>
         <li class="layui-nav-item">
-            <a href="javascript:;" style="color: red">${user.username}</a>
+            <a href="javascript:;" style="color: #fcf7f7">${user.username}</a>
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
                 <dd>
