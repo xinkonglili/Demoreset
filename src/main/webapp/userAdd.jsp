@@ -124,6 +124,7 @@
                    class="layui-input" lay-verify="required">
         </div>
     </div>
+
     <div class="layui-form-item">
         <label class="layui-form-label">状态</label>
         <div class="layui-input-block">
@@ -137,19 +138,20 @@
             </div>
         </div>
     </div>
+
     <label class="layui-form-label">图片</label>
     <div class="gallery" id="gallery">
         <div class="img-item" style="display: inline-block;" id="first-btn-upload">
+            
             <label for="btn-upload" class="btn-upload" id="btn-upload">上传图片</label>
             <div style="clear: both;"></div>
         </div>
+
         <div class="layui-input-block">
             <input id="file" type="file" multiple style="display: none">
-            <%--<div class="box">
-                <img src="" />
-            </div>--%>
         </div>
     </div>
+
     <div class="layui-form-item" style="margin-top: 15px">
         <div class="layui-input-block">
             <button class="layui-btn" lay-submit="" lay-filter="uploadpic" id="uploadpic">立即提交</button>

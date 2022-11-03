@@ -66,7 +66,7 @@
         </fieldset>
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
-                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"><i class="layui-icon"></i>批量删除</button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"><i class="layui-icon"></i>删除</button>
                 <button type="button"  class="layui-btn layui-btn-warm layui-btn-sm" lay-event="download">
                     <i class="layui-icon"></i>导出Excel
                 </button>

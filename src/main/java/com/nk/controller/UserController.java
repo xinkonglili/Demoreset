@@ -46,68 +46,9 @@ public class UserController {
      * 用户登录
      *
      * */
-  /*  @RequestMapping("/login")
-    protected String login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        if (req.getSession().getAttribute("user") != null) {
-            return "index";
-        } else {
-            //  1、获取请求的参数
-            String username = req.getParameter("username");
-            String password = req.getParameter("password");
-            //用户输入的验证码
-            String code = req.getParameter("userIdCode");//把验证码文本框里面的内容获取到
-            HttpSession session = req.getSession();
-            //强转，默认是object，拿到图片上的验证码
-            String vcode = (String) session.getAttribute("userIdCode");
-            if (code.equalsIgnoreCase(vcode)) {
-                // 调用 userService.login()登录处理业务
-                User user = userService.login(new User(username, password));
-                // 如果等于null,说明登录 失败!
-                if (user == null) {
-                    // 把错误信息，和回显的表单项信息，保存到Request域中
-                    req.setAttribute("msg", "用户或密码错误！");
-                    req.setAttribute("username", username);
-                    //   跳回登录页面
-                    return "/pages/user/login";
-                } else {
-                    if (user.getStatus() == 0) {
-                        req.setAttribute("msg", "账号已被禁用");
-                        return "/pages/user/login";
-                    } else {
-                        int userId = user.getUserId();
-                        String oldLoginTime = loginLogService.getPreLoginTimeByUserId(userId);
-                        Object o = online.get(req.getSession().getId());
-                        if(o==null){
-                            // 登录 成功
-                            online.put(req.getSession().getId(),"");
-                            //HttpSession session = req.getSession();
-                            session.setAttribute("username", username);
-                            session.setAttribute("userId", userId);
-                            session.setAttribute("user", user);
-                            session.setAttribute("oldLoginTime", oldLoginTime);
-                            Cookie c = new Cookie("JSESSIONID", URLEncoder.encode(session.getId(), "utf-8"));
-                            c.setPath("/");
-                            c.setMaxAge(2 * 60 * 60);
-                            resp.addCookie(c);
-                            return "index";
-                        }else{
-                            req.setAttribute("msg", "账号已登录！");
-                            return "/pages/user/login";
-                        }
-
-                    }
-                }
-            } else {
-                req.setAttribute("msg", "验证码错误");
-                return "/pages/user/login";
-            }
-        }
-    }*/
 
     @RequestMapping("/login")
     protected String login(HttpServletRequest req, HttpServletResponse resp, String username, String password, String verifyCode) throws ServletException, IOException {
-
         if (req.getSession().getAttribute("user") != null) {
             return "index";
         } else {
